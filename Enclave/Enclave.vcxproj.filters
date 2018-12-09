@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{98886615-b3e1-4285-a22f-3dc347a0a592}</UniqueIdentifier>
+      <Extensions>cpp;c;edl;def; .. and other options</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{369ee865-dc8d-43f2-b00f-7bc9e144c4ae}</UniqueIdentifier>
+      <Extensions>h;hpp; .. and other options</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{97bba242-ca51-49d1-a681-cd165a765dbf}</UniqueIdentifier>
+      <Extensions>rc;xml;pem; .. and other options</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{416edd81-83d3-442a-ae6f-e2f869c1d9f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Crypt Block">
+      <UniqueIdentifier>{b517ba00-0293-4868-8ba1-8203184a845d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Return Block">
+      <UniqueIdentifier>{72c152a8-ae9c-43c1-ad4d-ae605527c73b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Additional">
+      <UniqueIdentifier>{3ff77c59-39ca-4266-bd10-c62f992d01e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Crypt Block">
+      <UniqueIdentifier>{20e77f02-df8b-4917-8964-8a1d138171e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Additional">
+      <UniqueIdentifier>{2985a9b6-8b87-4bce-9df2-1147a0440f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Return Block">
+      <UniqueIdentifier>{d1fa8e96-9b45-4083-af03-f594da5c4185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logging Client">
+      <UniqueIdentifier>{4049762b-e273-4b10-b9ee-1ee578ffdc49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logging Client">
+      <UniqueIdentifier>{0a034a23-52b1-4eb7-8f8a-52118c39b3f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Channel Block">
+      <UniqueIdentifier>{13a9ba36-328b-445d-98ce-cc54ecf5f10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Channel Block">
+      <UniqueIdentifier>{457554fa-9c9e-4d6d-a5c6-6e3836ca37aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TDK Block">
+      <UniqueIdentifier>{1296d109-cf19-4210-a9d1-03b356ca88de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TDK Block">
+      <UniqueIdentifier>{a283b2be-3437-44b8-8af5-86351a223a0b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Enclave.edl">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Enclave_t.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Encryption_Decryption.cpp">
+      <Filter>Source Files\Crypt Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Sealing.cpp">
+      <Filter>Source Files\Return Block</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggingClient.cpp">
+      <Filter>Source Files\Logging Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Channel.cpp">
+      <Filter>Source Files\Channel Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Assymetric.cpp">
+      <Filter>Source Files\Additional</Filter>
+    </ClCompile>
+    <ClCompile Include="TDK.cpp">
+      <Filter>Source Files\TDK Block</Filter>
+    </ClCompile>
+    <ClCompile Include="enclave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enclave_private.pem">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Enclave.config.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enclave_t.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enclave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryption_Decryption.h">
+      <Filter>Header Files\Crypt Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Sealing.h">
+      <Filter>Header Files\Return Block</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggingClient.h">
+      <Filter>Header Files\Logging Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Channel.h">
+      <Filter>Header Files\Channel Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Assymetric.h">
+      <Filter>Header Files\Additional</Filter>
+    </ClInclude>
+    <ClInclude Include="TDK.h">
+      <Filter>Header Files\TDK Block</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
