@@ -1,0 +1,26 @@
+/* Enclave.edl - Top EDL file. */
+enclave {
+	include "sgx_tkey_exchange.h"
+    from "sgx_tae_service.edl" import *;
+	from "sgx_tkey_exchange.edl" import *;
+
+	include "sgx_key_exchange.h"
+	include "sgx_trts.h"
+	include "sgx_tseal.h"
+    include "user_types.h" /* buffer_t */
+
+    untrusted {
+        void ocall_print_string([in, string] const char *str);
+		void ocall_get_binary([out,size=textLength]char *text,int textLength,[in,size=fileNameSize]const char *fileName,int fileNameSize);
+		void ocall_write_binary([in,size=textLength]char *text,int textLength, [in,size=fileNameSize] const char* fileName, int fileNameSize);
+		void ocall_get_binary_file_size([in,size=pathLength]const char *path, int pathLength, [out] int *size);
+		long int ocall_get_timestamp();
+		int ocall_send_via_socket([in,size=length]const char* sendBuf, int length);
+		int ocall_receive_from_socket([out,size=length]char* recvBuf, int length);
+    };
+	trusted {
+		public sgx_status_t ecall_AuditLoggingEnc_sample([user_check]const char *plain, int length, [user_check] char *cipher, int lengthOutput,[in,size=lengthFilename]const char* filename, int lengthFilename);
+		public sgx_status_t ecall_AuditLoggingDec_sample([user_check]char *cipher, int length, [user_check] char *plain, int lengthOutput,[in,size=lengthFilename]const char* filename, int lengthFilename);
+	};
+
+};
